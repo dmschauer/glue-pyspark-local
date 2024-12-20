@@ -42,7 +42,7 @@ For usage when inside the Docker container:
 
 The `setup/glue_4_0_0_pyspark.Dockerfile` is based on an image provided by the AWS Glue team.
 
-It installs some dependencies that were needed to install system level dependencies needed for installing the `geopandas` Python package. Even if you don't need `geopandas`, this can also be useful to get you started in case you need more missing dependencies.
+It installs some dependencies that were needed to install system level dependencies needed for installing the `geopandas` Python package. Even if you don't need `geopandas`, this can be useful to get you started in case you need other missing dependencies.
 
 ## The docker-compose file
 
