@@ -88,7 +88,7 @@ In case you're not familiar with using the AWS CLI or simply don't need to acces
 
 Follow the instructions in https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-libraries.html#develop-local-docker-image under `Configuring AWS`
 
-## Working without any AWS setup
+## Working without AWS setup
 
 If you don't want to access any resources in AWS while developing locally, you can still use this project as is. All you would need to change is one line in the `src/sample.py` job that downloads a file from S3. You could replace it with a locally stored file. The same file is available in this repository in `data/persons.json`. Just take a look at the `src/sample.py`, you will find a comment that shows the required change.
 
