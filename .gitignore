@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# envrionment variables (dynamically created by set-env.sh as part of Makefile)
+setup/.env
+
+# caches
+.mypy_cache
+.pytest_cache
+.ruff_cache
+
+# working directory folders
+jupyter_workspace

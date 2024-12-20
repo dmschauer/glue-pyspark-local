@@ -1,0 +1,20 @@
+services:
+  glue_pyspark:
+    build:
+      context: .
+      dockerfile: glue_4_0_0_pyspark.Dockerfile
+    container_name: ${DOCKER_CONTAINER}
+    volumes:
+      - ${AWS_FOLDER_LOCATION}:/home/glue_user/.aws
+      - ${WORKSPACE_LOCATION}:/home/glue_user/workspace
+      - ${JUPYTER_WORKSPACE_LOCATION}:/home/glue_user/workspace/jupyter_workspace
+    environment:
+      - AWS_PROFILE=${AWS_PROFILE}
+      - DISABLE_SSL=true
+      - DATALAKE_FORMATS=hudi,delta,iceberg
+    ports:
+      - "4040:4040"   # Spark UI
+      - "18080:18080" # Glue UI
+      - "8998:8998"   # Spark Thrift Server
+      - "8888:8888"   # Jupyter Notebook
+    entrypoint: ["/bin/tail", "-f", "/dev/null"]
