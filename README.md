@@ -80,6 +80,14 @@ docker run -v $AWS_FOLDER_LOCATION:/home/glue_user/.aws -v $WORKSPACE_LOCATION:/
 - To exit the `Remote Development` session simply close the window
 - Run `make stop` to stop the container
 
+# GitHub Actions CI
+
+This section isn't important for the Glue and local development stuff per-se. I just want to include it for completeness. If it looks foreign to you, you can just ignore it.
+
+In `.github/workflows/ci.yml` there is a CI setup that matches the checks in `.pre-commit-config.yml`.
+It checks if the code passes both `ruff` (linting) and `mypy` (type checking).
+In this particular GitHub repository I also set a few rules that ensure Commits to the `main` branch can only be made when the Ci steps have passed. This is to prevent commits that circumvented runnin`pre-commit`.
+
 # Appendix A: AWS Setup
 
 In case you're not familiar with using the AWS CLI or simply don't need to access AWS, this Appendix is for you.
@@ -92,7 +100,7 @@ Follow the instructions in https://docs.aws.amazon.com/glue/latest/dg/aws-glue-p
 
 If you don't want to access any resources in AWS while developing locally, you can still use this project as is. All you would need to change is one line in the `src/sample.py` job that downloads a file from S3. You could replace it with a locally stored file. The same file is available in this repository in `data/persons.json`. Just take a look at the `src/sample.py`, you will find a comment that shows the required change.
 
-## Appendix B: Useful commands
+# Appendix B: Useful commands
 
 - `docker exec -it glue_pyspark_leidis /bin/sh` - start a shell session within the container
 - `docker exec -it --user root glue_pyspark_leidis /bin/sh` - start a shell session within the container as root user
