@@ -23,7 +23,7 @@ jobs:
 
     - name: Run Ruff linter
       run: |
-        ruff --fix --show-fixes .
+        ruff check .
 
     - name: Run Mypy type checker
       run: |
