@@ -71,12 +71,12 @@ docker run -v $AWS_FOLDER_LOCATION:/home/glue_user/.aws -v $WORKSPACE_LOCATION:/
   - Inside the new Window:
     - Click on `Open folder` and choose `/home/glue_user/workspace` as your working directory
     - Click on `Terminal` > `New Terminal`
-    - run `make venv`
+    - Run `make venv`
     - Now you can work within your repository as you would "locally". For example you can 
-      - install required libraries
+      - install libraries via `pip install -r requirements-dev.txt`
       - simply run `pytest`
-      - work with Git
-    - (optionally) run `make jupyter` to run a Jupyter instance from inside the container
+      - work with `git`as usual
+    - (optionally) run `make jupyter` to run a Jupyter instance from inside the container to develop your Pyspark jobs interactively
 - To exit the `Remote Development` session simply close the window
 - Run `make stop` to stop the container
 
