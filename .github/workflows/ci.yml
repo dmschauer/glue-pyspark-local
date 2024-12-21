@@ -26,8 +26,8 @@ jobs:
 
     - name: Run Ruff linter
       run: |
-        ruff check .
+        python -m ruff check .
 
     - name: Run Mypy type checker
       run: |
-        mypy .
+        python -m mypy .
