@@ -24,9 +24,9 @@ class GluePythonSampleTest:
     def run(self):
         dyf = read_json(
             self.context,
-            # "s3://awsglue-datasets/examples/us-legislators/all/persons.json",
+            "s3://awsglue-datasets/examples/us-legislators/all/persons.json",
             # if you want to use local file, use below:
-            "data/persons.json"
+            # "data/persons.json"
         )
         dyf.printSchema()
 
