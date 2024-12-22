@@ -86,7 +86,7 @@ This section isn't important for the Glue and local development stuff per-se. I 
 
 In `.github/workflows/ci.yml` there is a CI setup that matches the checks in `.pre-commit-config.yml`.
 It checks if the code passes both `ruff` (linting) and `mypy` (type checking).
-In this particular GitHub repository I also set a few rules that ensure Commits to the `main` branch can only be made when the Ci steps have passed. This is to prevent commits that circumvented runnin`pre-commit`.
+In this particular GitHub repository I also set a few rules that ensure commits to the `main` branch can only be made when the CI steps have passed. This is to prevent commits that circumvent running `pre-commit` before pushing.
 
 # Appendix A: AWS Setup
 
