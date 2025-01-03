@@ -102,5 +102,5 @@ If you don't want to access any resources in AWS while developing locally, you c
 
 # Appendix B: Useful commands
 
-- `docker exec -it glue_pyspark_leidis /bin/sh` - start a shell session within the container
-- `docker exec -it --user root glue_pyspark_leidis /bin/sh` - start a shell session within the container as root user
+- `docker exec -it glue_pyspark /bin/sh` - start a shell session within the container
+- `docker exec -it --user root glue_pyspark /bin/sh` - start a shell session within the container as root user
